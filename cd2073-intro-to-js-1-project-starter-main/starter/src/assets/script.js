@@ -1,6 +1,6 @@
 /* Create an array named products which you will use to add all of your product object literals that you create in the next step. */
 
-const products = [];
+const products = [product1, product2, product3];
 
 /* Create 3 or more product objects using object literal notation 
    Each product should include five properties
@@ -11,8 +11,6 @@ const products = [];
    - image: picture of product (url string)
 */
 
-// let url = new URL("../images/cherry.jpg")
-
 const product1 = {
   name : "Cherry",
   price : 1.00,
@@ -20,7 +18,7 @@ const product1 = {
   productId : 1,
   image : "../images/cherry.jpg"
 }
-console.log(product1.image)
+
 const product2 = {
   name : "Orange",
   price : 1.50,
@@ -44,6 +42,8 @@ const product3 = {
 */
 
 /* Declare an empty array named cart to hold the items in the cart */
+
+const cart = [];
 
 /* Create a function named addProductToCart that takes in the product productId as an argument
   - addProductToCart should get the correct product based on the productId
