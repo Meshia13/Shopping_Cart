@@ -20,7 +20,7 @@ const product1 = {
   productId : 1,
   image : "../images/cherry.jpg"
 }
-
+console.log(product1.image)
 const product2 = {
   name : "Orange",
   price : 1.50,
