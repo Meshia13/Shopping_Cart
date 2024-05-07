@@ -1,6 +1,6 @@
 /* Create an array named products which you will use to add all of your product object literals that you create in the next step. */
 
-const products = [product1, product2, product3];
+const products = ["cherry", "orange", "strawberry"];
 
 /* Create 3 or more product objects using object literal notation 
    Each product should include five properties
@@ -11,29 +11,35 @@ const products = [product1, product2, product3];
    - image: picture of product (url string)
 */
 
-const product1 = {
-  name : "Cherry",
-  price : 1.00,
-  quantity : 0,
-  productId : 1,
-  image : "../images/cherry.jpg"
-}
+const fruit = [
+  { name : "Cherry", price : 1.00, quantity : 0, productId : 1, image : "../images/cherry.jpg" },
+  { name : "Orange",  price : 1.50, quantity : 0, productId : 2, image : "../images/orange.jpg" },
+  { name : "Strawberry", price : 2.00, quantity : 0,  productId : 3, image : "../images/strawberry.jpg" }
+]
 
-const product2 = {
-  name : "Orange",
-  price : 1.50,
-  quantity : 0,
-  productId : 2,
-  image : "../images/orange.jpg"
-}
+// const product1 = {
+//   name : "Cherry",
+//   price : 1.00,
+//   quantity : 0,
+//   productId : 1,
+//   image : "../images/cherry.jpg"
+// }
 
-const product3 = {
-  name : "Strawberry",
-  price : 2.00,
-  quantity : 0,
-  productId : 3,
-  image : "../images/strawberry.jpg"
-}
+// const product2 = {
+//   name : "Orange",
+//   price : 1.50,
+//   quantity : 0,
+//   productId : 2,
+//   image : "../images/orange.jpg"
+// }
+
+// const product3 = {
+//   name : "Strawberry",
+//   price : 2.00,
+//   quantity : 0,
+//   productId : 3,
+//   image : "../images/strawberry.jpg"
+// }
 
 /* Images provided in /images folder. All images from Unsplash.com
    - cherry.jpg by Mae Mu
@@ -49,7 +55,12 @@ const cart = [];
   - addProductToCart should get the correct product based on the productId
   - addProductToCart should then increase the product's quantity
   - if the product is not already in the cart, add it to the cart
-*/
+*/ 
+
+// function addProductToCart(product) {
+//  if (product === )
+// }
+// console.log(addProductToCart(1))
 
 /* Create a function named increaseQuantity that takes in the productId as an argument
   - increaseQuantity should get the correct product based on the productId
