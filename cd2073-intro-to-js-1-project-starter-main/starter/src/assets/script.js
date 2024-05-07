@@ -1,6 +1,10 @@
 /* Create an array named products which you will use to add all of your product object literals that you create in the next step. */
 
-const products = ["cherry", "orange", "strawberry"];
+const products = [
+  { name : "Cherry", price : 1.00, quantity : 0, productId : 1, image : "../images/cherry.jpg" },
+  { name : "Orange",  price : 1.50, quantity : 0, productId : 2, image : "../images/orange.jpg" },
+  { name : "Strawberry", price : 2.00, quantity : 0,  productId : 3, image : "../images/strawberry.jpg" }
+];
 
 /* Create 3 or more product objects using object literal notation 
    Each product should include five properties
@@ -10,36 +14,6 @@ const products = ["cherry", "orange", "strawberry"];
    - productId: unique id for the product (number)
    - image: picture of product (url string)
 */
-
-const fruit = [
-  { name : "Cherry", price : 1.00, quantity : 0, productId : 1, image : "../images/cherry.jpg" },
-  { name : "Orange",  price : 1.50, quantity : 0, productId : 2, image : "../images/orange.jpg" },
-  { name : "Strawberry", price : 2.00, quantity : 0,  productId : 3, image : "../images/strawberry.jpg" }
-]
-
-// const product1 = {
-//   name : "Cherry",
-//   price : 1.00,
-//   quantity : 0,
-//   productId : 1,
-//   image : "../images/cherry.jpg"
-// }
-
-// const product2 = {
-//   name : "Orange",
-//   price : 1.50,
-//   quantity : 0,
-//   productId : 2,
-//   image : "../images/orange.jpg"
-// }
-
-// const product3 = {
-//   name : "Strawberry",
-//   price : 2.00,
-//   quantity : 0,
-//   productId : 3,
-//   image : "../images/strawberry.jpg"
-// }
 
 /* Images provided in /images folder. All images from Unsplash.com
    - cherry.jpg by Mae Mu
@@ -57,10 +31,36 @@ const cart = [];
   - if the product is not already in the cart, add it to the cart
 */ 
 
-// function addProductToCart(product) {
-//  if (product === )
-// }
-// console.log(addProductToCart(1))
+function addProductToCart(productId) {
+
+  let product = null;
+  // Find the product in the products array
+  for (let i = 0; i < products.length; i++) {
+    if (productId ===  products[i].productId) {
+      productId = products[i];
+    }
+  }
+
+  let inCart = false; 
+
+  // Check if the product is already in the cart
+  for (let j = 0; j < cart.length; j++) {
+    if (cart[j].productId === productId) {
+      cart[j].quantity += 1; // Increase quantity if already in the cart
+      inCart = true;
+      break;
+    }
+  }
+
+  // If it's not in the cart, push a new object with quantity 1
+  if (!inCart) {
+    cart.push({ ...product, quantity: 1 }); // Push a new object with the product's details and quantity 1
+  }
+
+
+}
+addProductToCart(3)
+console.log(cart)
 
 /* Create a function named increaseQuantity that takes in the productId as an argument
   - increaseQuantity should get the correct product based on the productId
