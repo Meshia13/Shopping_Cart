@@ -98,12 +98,8 @@ function removeProductFromCart(productId) {
 
   for (let i= 0; i < cart.length; i++) {
     if (productId === cart[i].productId) {
-      cart[i].quantity = cart[i].quantity -1;
+      cart.splice(cart[i],1);
     }
-
-    if (cart[i].quantity < 0) {
-      cart.splice(cart[i],1)
-     }
   }            
 }
 
