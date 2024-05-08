@@ -103,6 +103,19 @@ function decreaseQuantity(productId) {
   - removeProductFromCart should remove the product from the cart
 */
 
+function removeProductFromCart(productId) {
+
+  for (let i= 0; i < cart.length; i++) {
+    if (productId === cart[i].productId) {
+      cart[i].quantity = cart[i].quantity -1;
+    }
+
+    if (cart[i].quantity < 0) {
+      cart.splice(cart[i],1)
+     }
+  }            
+}
+
 /* Create a function named cartTotal that has no parameters
   - cartTotal should iterate through the cart to get the total cost of all products
   - cartTotal should return the total cost of the products in the cart
