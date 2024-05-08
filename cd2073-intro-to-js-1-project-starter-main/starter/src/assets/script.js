@@ -62,6 +62,7 @@ function addProductToCart(productId) {
 
 function increaseQuantity(productId) {
   
+  // increasing items in cart
   for (let i = 0; i < cart.length; i++) {
     if (productId === cart[i]. productId) {
       cart[i].quantity = cart[i].quantity +1;
