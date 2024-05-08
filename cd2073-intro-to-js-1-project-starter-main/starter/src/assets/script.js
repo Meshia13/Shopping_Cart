@@ -61,7 +61,6 @@ function addProductToCart(productId) {
 */
 
 function increaseQuantity(productId) {
-
   
   for (let i = 0; i < cart.length; i++) {
     if (productId === cart[i]. productId) {
@@ -69,7 +68,6 @@ function increaseQuantity(productId) {
     }
   }
 }
-
 
 /* Create a function named decreaseQuantity that takes in the productId as an argument
   - decreaseQuantity should get the correct product based on the productId
