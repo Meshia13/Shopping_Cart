@@ -54,8 +54,8 @@ function addProductToCart(productId) {
       cart.push({...product, quantity:1})
     }
 }
-addProductToCart(3)
-console.log(cart)
+// addProductToCart(3)
+// console.log(cart)
 
 /* Create a function named increaseQuantity that takes in the productId as an argument
   - increaseQuantity should get the correct product based on the productId
@@ -64,6 +64,7 @@ console.log(cart)
 
 function increaseQuantity(productId) {
 
+  
   for (let i = 0; i < cart.length; i++) {
     if (productId === cart[i]. productId) {
       cart[i].quantity = cart[i].quantity +1;
@@ -71,8 +72,8 @@ function increaseQuantity(productId) {
   }
 }
 
-increaseQuantity(3)
-console.log(cart)
+// increaseQuantity(3)
+// console.log(cart)
 
 /* Create a function named decreaseQuantity that takes in the productId as an argument
   - decreaseQuantity should get the correct product based on the productId
@@ -81,19 +82,20 @@ console.log(cart)
 */
 
 function decreaseQuantity(productId) {
+
   for (let i = 0; i < cart.length; i++) {
     if (productId === cart[i].productId) {
       cart[i].quantity = cart[i].quantity -1;
     }
 
     if (cart[i].quantity === 0) {
-      cart.slice(i, 1);
-    }
+      cart.splice(cart[i],1)
+     }
   }
 }
 
-decreaseQuantity(3)
-console.log(cart)
+// decreaseQuantity(3)
+// console.log(cart)
 
 /* Create a function named removeProductFromCart that takes in the productId as an argument
   - removeProductFromCart should get the correct product based on the productId
