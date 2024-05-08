@@ -33,34 +33,29 @@ const cart = [];
 
 function addProductToCart(productId) {
 
-  let product = null;
   // Find the product in the products array
-  for (let i = 0; i < products.length; i++) {
-    if (productId ===  products[i].productId) {
-      productId = products[i];
+  let product = '';
+  for (let item = 0; item < products.length; item++) {
+    if (productId ===  products[item].productId) {
+      product = products[item];
     }
   }
 
-  let inCart = false; 
-
-  // Check if the product is already in the cart
-  for (let j = 0; j < cart.length; j++) {
-    if (cart[j].productId === productId) {
-      cart[j].quantity += 1; // Increase quantity if already in the cart
-      inCart = true;
-      break;
+  let itemInCart = false; 
+  // check if item is in the cart, if so, increase by 1
+  for (let j=0; j < cart.length; j++) {
+    if (productId === cart[j].productId) {
+      cart[j].quantity = cart[j].quantity +1;
+      itemInCart = true;
     }
   }
-
-  // If it's not in the cart, push a new object with quantity 1
-  if (!inCart) {
-    cart.push({ ...product, quantity: 1 }); // Push a new object with the product's details and quantity 1
-  }
-
-
+  // if item is not in the cart, add item to array
+    if (!itemInCart) {
+      cart.push({...product, quantity:1})
+    }
 }
-addProductToCart(3)
-console.log(cart)
+// addProductToCart(3)
+// console.log(cart)
 
 /* Create a function named increaseQuantity that takes in the productId as an argument
   - increaseQuantity should get the correct product based on the productId
