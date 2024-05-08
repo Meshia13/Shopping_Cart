@@ -1,9 +1,9 @@
 /* Create an array named products which you will use to add all of your product object literals that you create in the next step. */
 
 const products = [
-  { name : "Cherry", price : 1.00, quantity : 0, productId : 1, image : "../images/cherry.jpg" },
-  { name : "Orange",  price : 1.50, quantity : 0, productId : 2, image : "../images/orange.jpg" },
-  { name : "Strawberry", price : 2.00, quantity : 0,  productId : 3, image : "../images/strawberry.jpg" }
+  { name : "Cherry", price : 1.00, quantity : 0, productId : 1, image : "../src/images/cherry.jpg" },
+  { name : "Orange",  price : 1.50, quantity : 0, productId : 2, image : "../src/images/orange.jpg" },
+  { name : "Strawberry", price : 2.00, quantity : 0,  productId : 3, image : "../src/images/strawberry.jpg" }
 ];
 
 /* Create 3 or more product objects using object literal notation 
