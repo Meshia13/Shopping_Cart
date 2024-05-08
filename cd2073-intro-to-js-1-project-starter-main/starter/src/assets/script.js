@@ -77,11 +77,13 @@ function increaseQuantity(productId) {
 
 function decreaseQuantity(productId) {
 
+  // decreasing the quantity in cart
   for (let i = 0; i < cart.length; i++) {
     if (productId === cart[i].productId) {
       cart[i].quantity = cart[i].quantity -1;
     }
 
+    // removing items from cart when at 0
     if (cart[i].quantity === 0) {
       cart.splice(cart[i],1)
      }
@@ -96,6 +98,7 @@ function decreaseQuantity(productId) {
 
 function removeProductFromCart(productId) {
 
+  // Removing all items from cart
   for (let i= 0; i < cart.length; i++) {
     if (productId === cart[i].productId) {
       cart.splice(cart[i],1);
@@ -112,6 +115,7 @@ function removeProductFromCart(productId) {
 function cartTotal() {
   let totalCost = 0;
 
+  // calculating the total cost and returning it
   for (let i =0; i < cart.length; i++) {
     totalCost = totalCost + (cart[i].quantity * cart[i].price);
   }
@@ -121,7 +125,7 @@ function cartTotal() {
 /* Create a function called emptyCart that empties the products from the cart */
 
 function emptyCart() {
-  cart.splice(0, cart.length);
+  cart.splice(0, cart.length); //emoty everything from cart
 }
 
 /* Create a function named pay that takes in an amount as an argument
