@@ -54,8 +54,6 @@ function addProductToCart(productId) {
       cart.push({...product, quantity:1})
     }
 }
-// addProductToCart(3)
-// console.log(cart)
 
 /* Create a function named increaseQuantity that takes in the productId as an argument
   - increaseQuantity should get the correct product based on the productId
@@ -72,8 +70,6 @@ function increaseQuantity(productId) {
   }
 }
 
-// increaseQuantity(3)
-// console.log(cart)
 
 /* Create a function named decreaseQuantity that takes in the productId as an argument
   - decreaseQuantity should get the correct product based on the productId
@@ -93,9 +89,6 @@ function decreaseQuantity(productId) {
      }
   }
 }
-
-// decreaseQuantity(3)
-// console.log(cart)
 
 /* Create a function named removeProductFromCart that takes in the productId as an argument
   - removeProductFromCart should get the correct product based on the productId
@@ -134,7 +127,7 @@ function cartTotal() {
 /* Create a function called emptyCart that empties the products from the cart */
 
 function emptyCart() {
-  
+  cart.splice(0, cart.length);
 }
 
 /* Create a function named pay that takes in an amount as an argument
@@ -143,6 +136,23 @@ function emptyCart() {
   - pay will return a positive number if money should be returned to customer
   Hint: cartTotal function gives us cost of all the products in the cart  
 */
+
+function pay(amount) {
+
+  let pay=0;
+  let total = cartTotal();
+
+  if (amount < total) {
+    pay = amount - total;
+  }
+  else if (amount > total) {
+    pay = amount - total;
+  }
+  else {
+    pay;
+  }
+  return pay;
+}
 
 /* Place stand out suggestions here (stand out suggestions can be found at the bottom of the project rubric.)*/
 
