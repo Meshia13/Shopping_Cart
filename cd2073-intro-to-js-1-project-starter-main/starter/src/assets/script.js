@@ -51,7 +51,6 @@ function addProductToCart(productId) {
   if (!cart.includes(product)) {
     cart.push(product)
   }
-
   increaseQuantity(productId)
 }
 
