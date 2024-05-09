@@ -50,6 +50,8 @@ function addProductToCart(productId) {
   if (!cart.includes(product)) {
     cart.push(product)
   }
+
+  increaseQuantity(productId)
 }
 
 /* Create a function named increaseQuantity that takes in the productId as an argument
@@ -123,21 +125,23 @@ function emptyCart() {
   Hint: cartTotal function gives us cost of all the products in the cart  
 */
 
+let totalPaid = 0;
+
 function pay(amount) {
 
-  let pay=0;
-  let total = cartTotal();
+  // Amount paid
+  totalPaid = totalPaid + amount;
 
-  if (amount < total) {
-    pay = amount - total;
+  // remaining balance is total paid - cartTotal()
+  let remainingBalance = totalPaid - cartTotal();
+
+  if (remainingBalance >= 0) {
+    totalPaid = 0;
+    emptyCart();
   }
-  else if (amount > total) {
-    pay = amount - total;
-  }
-  else {
-    pay;
-  }
-  return pay;
+  
+
+  return remainingBalance;
 }
 
 /* Place stand out suggestions here (stand out suggestions can be found at the bottom of the project rubric.)*/
