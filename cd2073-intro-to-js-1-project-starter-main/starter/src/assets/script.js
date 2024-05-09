@@ -33,6 +33,7 @@ const cart = [];
 
 // Helper function
 //find() method is finding the first items that match and is returning it
+// productList will take in either "products" object or "cart" array
 function findProduct(productId, productList) {
   return productList.find(function(product) { 
     return  product.productId === productId
@@ -41,7 +42,7 @@ function findProduct(productId, productList) {
 
 function addProductToCart(productId) {
 
-  // Using helper function to find matching ids of the
+  // Using helper function to find matching IDs of the
   // productId and object array "products"
   let product = findProduct(productId, products)
 
@@ -61,6 +62,7 @@ function addProductToCart(productId) {
 
 function increaseQuantity(productId) {
 
+  // increasing quantity of products in the cart
   let product = findProduct(productId, cart)
   product.quantity = product.quantity + 1;
 }
@@ -73,11 +75,11 @@ function increaseQuantity(productId) {
 
 function decreaseQuantity(productId) {
 
-  // decreasing the quantity in cart
+  // decreasing the quantity of products in the cart
   let product = findProduct(productId, cart)
   product.quantity = product.quantity - 1;
 
-  // removing items from cart when at 0
+  // removing items from cart when quantity is at 0
   if (product.quantity === 0) {
     cart.splice(product,1)
   }
