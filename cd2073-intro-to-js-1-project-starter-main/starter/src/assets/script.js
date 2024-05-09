@@ -135,6 +135,8 @@ function pay(amount) {
   // remaining balance is total paid - cartTotal()
   let remainingBalance = totalPaid - cartTotal();
 
+  // if remainingBalance is greater than or equal to zero
+  // totalPaid resets to zero to allow additional payment
   if (remainingBalance >= 0) {
     totalPaid = 0;
     emptyCart();
