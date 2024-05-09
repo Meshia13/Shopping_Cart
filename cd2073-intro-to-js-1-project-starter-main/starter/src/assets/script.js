@@ -90,8 +90,9 @@ function decreaseQuantity(productId) {
 function removeProductFromCart(productId) {
 
   // Item is removed entirely from the cart
-  let product = findProduct(productId, cart)
-  cart.splice(product,1)         
+  let product = findProduct(productId, cart) 
+  cart.splice(product,1) 
+       
 }
 
 /* Create a function named cartTotal that has no parameters
