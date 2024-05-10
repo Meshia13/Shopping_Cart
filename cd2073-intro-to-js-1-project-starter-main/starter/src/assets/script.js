@@ -76,8 +76,10 @@ function decreaseQuantity(productId) {
 
   // decreasing the quantity of products in the cart
   let product = findProduct(productId, cart)
-  if (product.quantity > 0) {
-    product.quantity = product.quantity - 1;
+  product.quantity = product.quantity - 1;
+  if (product.quantity === 0) {
+    product.quantity = 0
+    cart.splice(product.name,1)
   }
 }
 
@@ -91,7 +93,8 @@ function removeProductFromCart(productId) {
 
   // Item is removed entirely from the cart
   let product = findProduct(productId, cart) 
-  cart.splice(product,1) 
+  product.quantity = 0
+  cart.splice(product.name,1) 
        
 }
 
