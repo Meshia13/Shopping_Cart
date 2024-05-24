@@ -27,7 +27,7 @@ const cart = [];
 
 /* Create a function named addProductToCart that takes in the product productId as an argument
   - addProductToCart should get the correct product based on the productId
-  - addProductToCart should then increase the product's quantity
+  - addProductToCart should then increase the product's quantity ( -- using increaseQuantity function)
   - if the product is not already in the cart, add it to the cart
 */ 
 
